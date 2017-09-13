@@ -12,8 +12,14 @@
 from artist in Artists
 	where artist.Name.Contains("ch")
 		select artist
+		
 //artists with multiple albums
 //need an aggregarte test in the where. aggregate test are done against a collection
 from artist in Artists
 	where artist.Albums.Count()>1
+		select artist
+		
+//combo where
+from artist in Artists
+	where artist.Albums.Count()>1 && artist.Name.Contains("ch")
 		select artist
