@@ -23,3 +23,8 @@ from artist in Artists
 from artist in Artists
 	where artist.Albums.Count()>1 && artist.Name.Contains("ch")
 		select artist
+
+//test nulls
+from alb in Albums
+	where alb.ReleaseLabel.HasValue
+	select alb
