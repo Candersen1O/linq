@@ -26,5 +26,10 @@ from artist in Artists
 
 //test nulls
 from alb in Albums
-	where alb.ReleaseLabel.HasValue
+	where alb.ReleaseLabel != null || alb.ReleaseLabel != ""
+	select alb
+	
+	//no works
+	from alb in Albums
+	where string.IsNullOrEmpty(alb.ReleaseLabel)
 	select alb
