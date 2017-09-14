@@ -44,7 +44,7 @@ public class employee{
 	public string Name{get;set;}
 	public string Phone{get;set;}
 	public int ClientCount{get;set;}
-	//public IEnumberable<client> Clients{get;set;}
+	//public IEnumerable<client> Clients{get;set;}
 	public List<client> Clients{get;set;}
 
 }
