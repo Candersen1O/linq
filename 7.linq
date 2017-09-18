@@ -54,3 +54,8 @@ from x in Albums
 					averageAlubmLength= (from y in x.Tracks
 					select y.Milliseconds).Average()
  }
+ 
+Albums.First()
+Albums.First(t=>t.Title.StartsWith("m"))
+Albums.ToList()
+Albums
